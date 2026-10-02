@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MAHIEDITS | Video Editing & YouTube</title>
+<title>MAHIEDITS | Official</title>
 
 <style>
 *{
@@ -12,22 +12,21 @@
     padding:0;
     box-sizing:border-box;
     scroll-behavior:smooth;
-    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#070707;
-    color:white;
-    line-height:1.6;
+    font-family:Arial, sans-serif;
+    background:#050505;
+    color:#fff;
 }
 
 nav{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(7,7,7,0.95);
+    padding:18px 7%;
+    background:rgba(5,5,5,.94);
     border-bottom:1px solid #222;
-    padding:18px 8%;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -41,8 +40,8 @@ nav{
 
 nav ul{
     display:flex;
-    list-style:none;
     gap:25px;
+    list-style:none;
 }
 
 nav a{
@@ -56,20 +55,40 @@ nav a:hover{
 }
 
 .hero{
-    min-height:90vh;
+    min-height:92vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:40px 20px;
+    padding:30px 20px;
     background:
-    radial-gradient(circle at center,#123d2b 0%,#070707 55%);
+    radial-gradient(circle at center,#0c4b32 0%,#07150f 30%,#050505 65%);
+}
+
+.hero-content{
+    animation:show 1s ease;
+}
+
+.profile{
+    width:145px;
+    height:145px;
+    margin:auto;
+    margin-bottom:25px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:50px;
+    font-weight:bold;
+    color:#000;
+    background:linear-gradient(135deg,#00ff88,#00a85a);
+    border:4px solid #00ff88;
+    box-shadow:0 0 45px #00ff8840;
 }
 
 .hero h1{
-    font-size:70px;
-    letter-spacing:4px;
-    margin-bottom:10px;
+    font-size:72px;
+    letter-spacing:6px;
 }
 
 .hero h1 span{
@@ -77,74 +96,88 @@ nav a:hover{
 }
 
 .hero p{
-    color:#ccc;
-    font-size:20px;
-    margin-bottom:30px;
+    color:#bbb;
+    font-size:19px;
+    margin:15px 0 30px;
 }
 
 .btn{
     display:inline-block;
     padding:14px 28px;
-    margin:8px;
+    margin:6px;
     border-radius:30px;
     text-decoration:none;
     font-weight:bold;
     transition:.3s;
 }
 
-.btn-green{
+.green{
     background:#00ff88;
     color:#000;
 }
 
-.btn-green:hover{
-    transform:scale(1.05);
-}
-
-.btn-dark{
+.dark{
     border:1px solid #00ff88;
     color:#00ff88;
 }
 
-.btn-dark:hover{
-    background:#00ff88;
-    color:#000;
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px #00ff8830;
 }
 
 section{
-    padding:80px 8%;
+    padding:85px 7%;
 }
 
-.title{
+.heading{
     text-align:center;
     margin-bottom:45px;
 }
 
-.title h2{
-    font-size:40px;
-    margin-bottom:10px;
+.heading h2{
+    font-size:42px;
 }
 
-.title span{
+.heading span{
     color:#00ff88;
 }
 
-.title p{
-    color:#999;
+.heading p{
+    color:#777;
 }
 
-.cards{
+.about{
+    background:#0b0b0b;
+}
+
+.about-box{
+    max-width:850px;
+    margin:auto;
+    padding:45px;
+    text-align:center;
+    background:#111;
+    border:1px solid #222;
+    border-radius:22px;
+}
+
+.about-box p{
+    color:#bbb;
+    font-size:18px;
+}
+
+.services{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
 }
 
 .card{
-    background:#111;
-    border:1px solid #222;
-    border-radius:18px;
-    padding:30px 20px;
+    padding:32px 20px;
     text-align:center;
+    background:#101010;
+    border:1px solid #222;
+    border-radius:20px;
     transition:.3s;
 }
 
@@ -153,76 +186,59 @@ section{
     border-color:#00ff88;
 }
 
-.icon{
+.card .icon{
     font-size:45px;
     margin-bottom:15px;
 }
 
-.card h3{
-    margin-bottom:10px;
-}
-
 .card p{
-    color:#aaa;
+    color:#888;
+    margin-top:8px;
 }
 
-.about{
-    background:#0d0d0d;
+.video-section{
+    background:#080808;
 }
 
-.about-box{
-    max-width:850px;
-    margin:auto;
-    text-align:center;
-}
-
-.about-box p{
-    color:#bbb;
-    font-size:18px;
-}
-
-.video-grid{
+.videos{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
 
 .video{
-    background:#111;
-    border-radius:18px;
     overflow:hidden;
+    background:#111;
     border:1px solid #222;
+    border-radius:20px;
     transition:.3s;
 }
 
 .video:hover{
-    transform:translateY(-6px);
+    transform:translateY(-7px);
     border-color:#00ff88;
 }
 
-.video-img{
-    height:180px;
+.video-top{
+    height:190px;
     display:flex;
-    align-items:center;
     justify-content:center;
-    font-size:55px;
-    background:linear-gradient(135deg,#123d2b,#151515);
+    align-items:center;
+    font-size:60px;
+    background:linear-gradient(135deg,#06482f,#111);
 }
 
-.video-content{
-    padding:20px;
+.video-info{
+    padding:22px;
 }
 
-.video-content h3{
-    margin-bottom:8px;
-}
-
-.video-content p{
-    color:#999;
+.video-info p{
+    color:#888;
+    margin:8px 0;
 }
 
 .gallery{
-    background:#0d0d0d;
+    background:#0b0b0b;
 }
 
 .gallery-grid{
@@ -231,22 +247,22 @@ section{
     gap:20px;
 }
 
-.gallery-item{
+.thumbnail{
     height:200px;
-    border-radius:15px;
-    border:1px solid #222;
+    border-radius:18px;
     display:flex;
-    align-items:center;
     justify-content:center;
-    background:linear-gradient(135deg,#00ff88,#111);
-    color:#000;
-    font-size:22px;
+    align-items:center;
+    text-align:center;
+    font-size:24px;
     font-weight:bold;
+    color:#000;
+    background:linear-gradient(135deg,#00ff88,#07502f);
     transition:.3s;
 }
 
-.gallery-item:hover{
-    transform:scale(1.03);
+.thumbnail:hover{
+    transform:scale(1.04);
 }
 
 .contact{
@@ -254,36 +270,58 @@ section{
 }
 
 .contact-box{
-    max-width:700px;
+    max-width:750px;
     margin:auto;
-    background:#111;
-    border:1px solid #222;
-    border-radius:20px;
     padding:45px 25px;
+    border:1px solid #222;
+    border-radius:22px;
+    background:#111;
 }
 
 .contact-box p{
-    color:#aaa;
+    color:#999;
     margin-bottom:20px;
+}
+
+.youtube{
+    background:#ff0000;
+    color:white;
+}
+
+.whatsapp{
+    background:#25d366;
+    color:white;
 }
 
 footer{
     text-align:center;
     padding:30px;
-    border-top:1px solid #222;
     color:#777;
+    border-top:1px solid #222;
 }
 
 footer span{
     color:#00ff88;
 }
 
+@keyframes show{
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 @media(max-width:900px){
-    .cards{
+
+    .services{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .video-grid{
+    .videos{
         grid-template-columns:1fr;
     }
 
@@ -292,23 +330,24 @@ footer span{
     }
 
     .hero h1{
-        font-size:50px;
+        font-size:55px;
     }
 }
 
 @media(max-width:600px){
+
     nav{
         flex-direction:column;
         gap:15px;
     }
 
     nav ul{
-        gap:12px;
         flex-wrap:wrap;
         justify-content:center;
+        gap:12px;
     }
 
-    .cards{
+    .services{
         grid-template-columns:1fr;
     }
 
@@ -324,8 +363,10 @@ footer span{
         font-size:16px;
     }
 
-    section{
-        padding:60px 5%;
+    .profile{
+        width:115px;
+        height:115px;
+        font-size:38px;
     }
 }
 </style>
@@ -347,168 +388,234 @@ footer span{
 </nav>
 
 <section class="hero" id="home">
-    <div>
+
+    <div class="hero-content">
+
+        <div class="profile">M</div>
+
         <h1>MAHI<span>EDITS</span></h1>
 
         <p>
-            Video Editing • YouTube • Shorts • Thumbnails • Blogging
+            🎬 Video Editing • YouTube • Shorts • Thumbnails • Blogging
         </p>
 
-        <a class="btn btn-green" href="#services">
-            Explore Now
+        <a class="btn green" href="#about">
+            Explore Website
         </a>
 
-        <a class="btn btn-dark"
+        <a class="btn dark"
         href="https://www.youtube.com/@mahiedits-z8b"
         target="_blank">
-            ▶ Visit My YouTube
+            ▶ My YouTube
         </a>
+
     </div>
+
 </section>
 
-<section id="about" class="about">
+<section class="about" id="about">
 
-    <div class="title">
-        <h2>About <span>Me</span></h2>
+    <div class="heading">
+        <h2>About <span>MAHIEDITS</span></h2>
         <p>Welcome to my official website</p>
     </div>
 
     <div class="about-box">
+
         <p>
-            Welcome to MAHIEDITS! 🚀
+            👋 Welcome to MAHIEDITS!
             <br><br>
-            Yahan aapko YouTube videos, video editing,
-            Shorts, thumbnails aur blogging se related
-            content milega.
+            This is my official creative space where I share
+            YouTube videos, Shorts, video editing,
+            thumbnails and blogging content.
             <br><br>
-            Mera goal creative aur useful content banana hai
-            jo creators ke liye helpful ho.
+            🚀 Create • Edit • Upload • Grow
         </p>
+
     </div>
 
 </section>
 
 <section id="services">
 
-    <div class="title">
+    <div class="heading">
         <h2>My <span>Services</span></h2>
-        <p>What I create</p>
+        <p>Creative work & content</p>
     </div>
 
-    <div class="cards">
+    <div class="services">
 
         <div class="card">
             <div class="icon">🎬</div>
             <h3>Video Editing</h3>
-            <p>Creative and engaging video editing.</p>
+            <p>Creative video editing.</p>
         </div>
 
         <div class="card">
             <div class="icon">📱</div>
             <h3>YouTube Shorts</h3>
-            <p>Short-form videos for YouTube.</p>
+            <p>Short-form content.</p>
         </div>
 
         <div class="card">
             <div class="icon">🖼️</div>
             <h3>Thumbnails</h3>
-            <p>Eye-catching YouTube thumbnails.</p>
+            <p>Eye-catching thumbnails.</p>
         </div>
 
         <div class="card">
             <div class="icon">✍️</div>
             <h3>Blogging</h3>
-            <p>Creative blogging and online content.</p>
+            <p>Creative online content.</p>
         </div>
 
     </div>
 
 </section>
 
-<section id="videos">
+<section class="video-section" id="videos">
 
-    <div class="title">
+    <div class="heading">
         <h2>Latest <span>Videos</span></h2>
         <p>Watch my YouTube content</p>
     </div>
 
-    <div class="video-grid">
+    <div class="videos">
 
         <div class="video">
-            <div class="video-img">▶️</div>
-            <div class="video-content">
+
+            <div class="video-top">▶️</div>
+
+            <div class="video-info">
+
                 <h3>My First Vlog</h3>
-                <p>Watch my latest vlog on YouTube.</p>
-                <a class="btn btn-green"
+
+                <p>
+                    Watch my latest vlog.
+                </p>
+
+                <a class="btn green"
                 href="https://www.youtube.com/@mahiedits-z8b"
-                target="_blank">Watch</a>
+                target="_blank">
+                    Watch
+                </a>
+
             </div>
+
         </div>
 
         <div class="video">
-            <div class="video-img">🎥</div>
-            <div class="video-content">
-                <h3>Editing Videos</h3>
-                <p>Creative editing and YouTube content.</p>
-                <a class="btn btn-green"
+
+            <div class="video-top">🎥</div>
+
+            <div class="video-info">
+
+                <h3>Editing Content</h3>
+
+                <p>
+                    Creative editing videos.
+                </p>
+
+                <a class="btn green"
                 href="https://www.youtube.com/@mahiedits-z8b"
-                target="_blank">Watch</a>
+                target="_blank">
+                    Watch
+                </a>
+
             </div>
+
         </div>
 
         <div class="video">
-            <div class="video-img">🔥</div>
-            <div class="video-content">
+
+            <div class="video-top">🔥</div>
+
+            <div class="video-info">
+
                 <h3>YouTube Shorts</h3>
-                <p>Short and entertaining content.</p>
-                <a class="btn btn-green"
+
+                <p>
+                    Short and entertaining videos.
+                </p>
+
+                <a class="btn green"
                 href="https://www.youtube.com/@mahiedits-z8b"
-                target="_blank">Watch</a>
+                target="_blank">
+                    Watch
+                </a>
+
             </div>
+
         </div>
 
     </div>
 
 </section>
 
-<section id="gallery" class="gallery">
+<section class="gallery" id="gallery">
 
-    <div class="title">
+    <div class="heading">
+
         <h2>Thumbnail <span>Gallery</span></h2>
+
         <p>My creative work</p>
+
     </div>
 
     <div class="gallery-grid">
 
-        <div class="gallery-item">MAHIEDITS</div>
-        <div class="gallery-item">MY VLOG</div>
-        <div class="gallery-item">YOUTUBE</div>
-        <div class="gallery-item">SHORTS</div>
-        <div class="gallery-item">EDITING</div>
-        <div class="gallery-item">NEW VIDEO</div>
+        <div class="thumbnail">
+            MY FIRST VLOG
+        </div>
+
+        <div class="thumbnail">
+            RAILWAY STATION VLOG
+        </div>
+
+        <div class="thumbnail">
+            MONEY MATTER
+        </div>
+
+        <div class="thumbnail">
+            YOUTUBE EDITING
+        </div>
+
+        <div class="thumbnail">
+            NEW VIDEO
+        </div>
+
+        <div class="thumbnail">
+            MAHIEDITS
+        </div>
 
     </div>
 
 </section>
 
-<section id="contact" class="contact">
+<section class="contact" id="contact">
 
-    <div class="title">
-        <h2>Contact <span>Me</span></h2>
-        <p>Let's connect</p>
+    <div class="heading">
+        <h2>Let's <span>Connect</span></h2>
+        <p>Follow MAHIEDITS</p>
     </div>
 
     <div class="contact-box">
 
         <p>
-            You can follow my YouTube channel
-            and watch my latest videos.
+            Subscribe to my YouTube channel
+            and stay connected.
         </p>
 
-        <a class="btn btn-green"
+        <a class="btn youtube"
         href="https://www.youtube.com/@mahiedits-z8b"
         target="_blank">
-            ▶ Subscribe on YouTube
+            ▶ YouTube
+        </a>
+
+        <a class="btn whatsapp"
+        href="https://wa.me/"
+        target="_blank">
+            💬 WhatsApp
         </a>
 
     </div>
