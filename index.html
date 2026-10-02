@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+S<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -75,15 +75,16 @@ nav a:hover{
     margin:auto;
     margin-bottom:25px;
     border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:50px;
-    font-weight:bold;
-    color:#000;
-    background:linear-gradient(135deg,#00ff88,#00a85a);
+    overflow:hidden;
     border:4px solid #00ff88;
     box-shadow:0 0 45px #00ff8840;
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 .hero h1{
@@ -391,7 +392,9 @@ footer span{
 
     <div class="hero-content">
 
-        <div class="profile">M</div>
+       <div class="profile">
+    <img src="Neon%20Green%20Mahiedits%20Channel%20Showcase.png" alt="MAHIEDITS Profile">
+</div>
 
         <h1>MAHI<span>EDITS</span></h1>
 
